@@ -91,7 +91,7 @@ class HeapMergeBench {
 
   // create array for sorting
   //val arr = Array.fill(2000000) { scala.util.Random.nextInt(5000000 - 1) }
-  val arr = Array.fill(20000) {
+  val arr = Array.fill(500000) {
     scala.util.Random.nextInt(5000000 - 1)
   }
 
@@ -104,16 +104,12 @@ class HeapMergeBench {
   //  [info] HeapMergeBench.mergeSortBench                  avgt    5    9,494 ?  0,143  ms/op
 
   // results for 500000
-  //  [info] Benchmark                                  Mode  Cnt     Score      Error  Units
-  //  [info] QuickBench.mappingArraysWithBindBench      avgt    5    47,102 ?    8,551  ms/op
-  //  [info] QuickBench.mappingArraysWithFlatMapBench   avgt    5    48,076 ?    7,175  ms/op
-  //  [info] QuickBench.quicksortArrayBench             avgt    5    54,339 ?    0,778  ms/op
-  //  [info] QuickBench.quicksortArrayBufferBench       avgt    5   112,387 ?    5,576  ms/op
-  //  [info] QuickBench.quicksortFunctionalBench        avgt    5  1058,847 ?   11,982  ms/op
-  //  [info] QuickBench.quicksortMonadicSTBench         avgt    5  5535,203 ? 2899,628  ms/op
-  //  [info] QuickBench.quicksortStdLibBench            avgt    5    56,663 ?    3,047  ms/op
-  //  [info] QuickBench.quicksortVectorBench            avgt    5   816,498 ?   99,439  ms/op
-  //  [info] QuickBench.quicksortVectorFunctionalBench  avgt    5   865,723 ?   48,723  ms/op
+  //  [info] Benchmark                                      Mode  Cnt      Score       Error  Units
+  //  [info] HeapMergeBench.heapSortLeftistFastBench        avgt    5  33472,645 ? 13342,665  ms/op
+  //  [info] HeapMergeBench.heapSortLeftistHeapBench        avgt    5   6778,557 ?  2001,965  ms/op
+  //  [info] HeapMergeBench.heapSortLeftistHeapImpureBench  avgt    5   6337,421 ?  3852,705  ms/op
+  //  [info] HeapMergeBench.heapSortPQBench                 avgt    5    330,861 ?    55,857  ms/op
+  //  [info] HeapMergeBench.mergeSortBench                  avgt    5    410,712 ?    20,858  ms/op
 
   // results for 1000000
   //  [info] Benchmark                                  Mode  Cnt      Score      Error  Units
