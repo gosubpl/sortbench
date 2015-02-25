@@ -91,7 +91,7 @@ class HeapMergeBench {
 
   // create array for sorting
   //val arr = Array.fill(2000000) { scala.util.Random.nextInt(5000000 - 1) }
-  val arr = Array.fill(500000) {
+  val arr = Array.fill(1000000) {
     scala.util.Random.nextInt(5000000 - 1)
   }
 
@@ -112,28 +112,15 @@ class HeapMergeBench {
   //  [info] HeapMergeBench.mergeSortBench                  avgt    5    410,712 ?    20,858  ms/op
 
   // results for 1000000
-  //  [info] Benchmark                                  Mode  Cnt      Score      Error  Units
-  //  [info] QuickBench.mappingArraysWithBindBench      avgt    5    129,738 ?   46,444  ms/op
-  //  [info] QuickBench.mappingArraysWithFlatMapBench   avgt    5    140,983 ?   32,758  ms/op
-  //  [info] QuickBench.quicksortArrayBench             avgt    5    112,694 ?    5,327  ms/op
-  //  [info] QuickBench.quicksortArrayBufferBench       avgt    5    252,854 ?   60,956  ms/op
-  //  [info] QuickBench.quicksortFunctionalBench        avgt    5   2192,502 ?   49,585  ms/op
-  //  [info] QuickBench.quicksortMonadicSTBench         avgt    5  13423,726 ? 7254,023  ms/op
-  //  [info] QuickBench.quicksortStdLibBench            avgt    5    116,997 ?    1,773  ms/op
-  //  [info] QuickBench.quicksortVectorBench            avgt    5   1790,146 ?   70,729  ms/op
-  //  [info] QuickBench.quicksortVectorFunctionalBench  avgt    5   1981,340 ?  129,203  ms/op
+  //  [info] Benchmark                                      Mode  Cnt      Score      Error  Units
+  //  [info] HeapMergeBench.heapSortLeftistFastBench        java.lang.OutOfMemoryError: GC overhead limit exceeded
+  //  [info] HeapMergeBench.heapSortLeftistHeapBench        avgt    5  15368,208 ? 4621,253  ms/op
+  //  [info] HeapMergeBench.heapSortLeftistHeapImpureBench  avgt    5  13297,206 ?  913,167  ms/op
+  //  [info] HeapMergeBench.heapSortPQBench                 avgt    5    834,162 ?  188,393  ms/op
+  //  [info] HeapMergeBench.mergeSortBench                  avgt    5   1035,488 ?  264,340  ms/op
 
   // results for 2000000
-  //  [info] Benchmark                                  Mode  Cnt      Score       Error  Units
-  //  [info] QuickBench.mappingArraysWithBindBench      avgt    5    979,006 ?  2907,177  ms/op
-  //  [info] QuickBench.mappingArraysWithFlatMapBench   avgt    5    832,711 ?  2388,770  ms/op
-  //  [info] QuickBench.quicksortArrayBench             avgt    5    231,814 ?     2,516  ms/op
-  //  [info] QuickBench.quicksortArrayBufferBench       avgt    5    560,954 ?    59,608  ms/op
-  //  [info] QuickBench.quicksortFunctionalBench        avgt    5   4726,001 ?    74,034  ms/op
-  //  [info] QuickBench.quicksortMonadicSTBench         avgt    5  35290,807 ? 10977,761  ms/op
-  //  [info] QuickBench.quicksortStdLibBench            avgt    5    243,535 ?     7,372  ms/op
-  //  [info] QuickBench.quicksortVectorBench            avgt    5   4684,715 ?   721,453  ms/op
-  //  [info] QuickBench.quicksortVectorFunctionalBench  avgt    5   4375,908 ?   814,925  ms/op
+  //  did not run
 
   // copies of original array for sorting
   val arr1 = copy(arr)
