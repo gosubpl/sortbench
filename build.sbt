@@ -1,4 +1,4 @@
-name := "hello_jmh"
+name := "sortbench"
 
 version := "1.0"
 
